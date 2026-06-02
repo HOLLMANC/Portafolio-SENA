@@ -323,3 +323,43 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
+
+/* CONFIGURACIÓN ESPECIAL PARA CELULARES (RESPONSIVE) */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 450px;
+    }
+
+    .badge-card h1 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        background-color: var(--bg-color-main);
+        padding: 15px 0;
+    }
+
+    .navbar a {
+        margin: 0 15px;
+        font-size: 14px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 340px;
+    }
+}

@@ -3,62 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollman Cardozo | Portafolio</title>
+    <title>Hollman Cardozo - Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <nav class="navbar">
+        <a href="#about">Acerca de</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
     <header class="hero-banner">
-        <nav class="navbar">
-            <a href="#acerca-de">Acerca de</a>
-            <a href="#trabajos">Trabajos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
         <div class="banner-content">
             <div class="badge-card">
                 <h1>HOLLMAN CARDOZO</h1>
-                <p class="subtitle">Desarrollador Web</p>
+                <div class="subtitle">Desarrollador Web</div>
             </div>
         </div>
     </header>
 
-    <section id="acerca-de" class="about-section">
-        <img src="perfil.jpeg" alt="Hollman Cardozo" class="profile-img">
-        <h2>Acerca de</h2>
-        <p class="about-text">
-            Tu estilo, tu ritmo, tu familia, todo en un solo lugar. En nuestra tienda reunimos las mejores marcas del mercado para acompañarte en cada momento de tu vida. Desde la energía de la ropa deportiva y los tennis de última tendencia, hasta la elegancia de la moda formal y la frescura del estilo informal para hombres y mujeres. Además, pensamos en los más pequeños con una línea exclusiva de calzado y ropa para niños que combina diversión y comodidad. Ya sea que busques renovar tu clóset, entrenar al máximo o vestir a tus hijos con lo mejor, aquí encuentras variedad, calidad y el estilo perfecto para cada integrante del hogar.
-        </p>
+    <section id="about" class="about-section">
+        <img src="https://via.placeholder.com/180" alt="Hollman Cardozo" class="profile-img">
+        <div class="about-content">
+            <h2>Acerca de mí</h2>
+            <p class="about-text">
+                Bienvenido a mi portafolio profesional. Soy estudiante del SENA enfocado en el desarrollo web, creación de soluciones digitales y estructuración de proyectos eficientes. Me apasiona transformar ideas en sitios web modernos, rápidos y totalmente optimizados.
+            </p>
+        </div>
     </section>
 
     <section id="trabajos" class="collections-section">
-        <h2 class="collections-title">COLECCIONES</h2>
+        <h2 class="collections-title">Mis Trabajos</h2>
+
         <div class="products-grid">
             <div class="product-card">
-                <img src="producto1.jpeg" alt="Conjunto ARI">
-                <h3>Conjunto ARI ref. 22007</h3>
-                <p class="price">$ 430.000</p>
-            </div>
-            <div class="product-card">
-                <img src="producto2.jpeg" alt="Conjunto YMI">
-                <h3>Conjunto YMI ref. 25007</h3>
-                <p class="price">$ 320.000</p>
-            </div>
-            <div class="product-card">
-                <img src="producto3.jpeg" alt="Conjunto VAL">
-                <h3>Conjunto VAL ref. 32099</h3>
-                <p class="price">$ 230.000</p>
-            </div>
-            <div class="product-card">
-                <img src="producto4.jpeg" alt="Conjunto YMI 2">
+                <img src="producto1.jpeg" alt="Conjunto YMI">
                 <h3>Conjunto YMI ref. 55507</h3>
                 <p class="price">$ 720.000</p>
             </div>
+
             <div class="product-card">
-                <img src="producto5.jpeg" alt="Conjunto ARI 2">
+                <img src="producto2.jpeg" alt="Conjunto ARI">
                 <h3>Conjunto ARI ref. 78908</h3>
                 <p class="price">$ 520.000</p>
             </div>
+
             <div class="product-card">
                 <img src="producto6.jpeg" alt="Conjunto VAL 2">
                 <h3>Conjunto VAL ref. 67007</h3>
@@ -69,26 +60,23 @@
 
     <section id="contacto" class="contact-section">
         <h2>Contacto</h2>
+        <p style="color: #b0b0b0; margin-bottom: 30px;">Por favor, diligencia nuestro formulario oficial:</p>
 
-        <div style="width: 100%; text-align: center;">
-            <p style="color: #fff; margin-bottom: 15px;">Por favor, diligencia nuestro formulario oficial:</p>
-
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxHgLgd2smMTwdfDoOQeI1FpmAaca5zRpZN7Hc22kO9LKbWg/viewform?embedded=true" width="640" height="691" frameborder="0" marginheight="0" marginwidth="0">Cargando…</>" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario...</iframe>
+        <div style="max-width: 700px; margin: 0 auto;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxHgLgd2smMTwdfDoOQeI1FpmA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 12px; background: #161a22;">Cargando formulario...</iframe>
         </div>
-
     </section>
 
     <footer class="main-footer">
         <div class="social-icons">
             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="#" target="_blank"><i class="x-icon">X</i></a>
+            <a href="#" target="_blank"><span class="x-icon">X</span></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
