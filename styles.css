@@ -29,7 +29,7 @@ body {
 }
 
 /* ==========================================
-   HERO BANNER
+   HERO BANNER (EL MUNDO)
    ========================================== */
 .hero-banner {
     width: 100%;
@@ -95,7 +95,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN ACERCA DE MÍ (CORRECCIÓN FOTO GIGANTE)
+   SECCIÓN ACERCA DE MÍ (FOTO CIRCULAR FIJA)
    ========================================== */
 .about-section {
     width: 100%;
@@ -109,13 +109,9 @@ body {
 
 .profile-img {
     width: 180px;
-    /* Ajusta el tamaño de la foto gigante */
     height: 180px;
-    /* Mantiene la proporción simétrica */
     border-radius: 50%;
-    /* Hace la foto circular */
     object-fit: cover;
-    /* Evita que las niñas se vean estiradas */
     border: 3px solid var(--accent-color);
     display: block;
 }
