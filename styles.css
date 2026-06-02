@@ -1,4 +1,19 @@
-/* Limpieza básica para que no queden márgenes blancos feos */
+/* PALETA DE COLORES Y ESTILOS GLOBALES */
+:root {
+    --bg-color-main: #0a0c10;
+    /* Un negro casi puro para el fondo profundo */
+    --bg-color-card: #161a22;
+    /* Gris oscuro para las tarjetas */
+    --accent-color: #ffd700;
+    /* Dorado suave para acentos (bordes, botones) */
+    --text-color-main: #ffffff;
+    --text-color-sub: #b0b0b0;
+    /* Gris claro para subtítulos y textos largos */
+    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Tipografía limpia */
+}
+
+/* Limpieza básica */
 * {
     margin: 0;
     padding: 0;
@@ -6,115 +21,144 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #5d60cd;
+    font-family: var(--font-family-main);
+    background-color: var(--bg-color-main);
+    color: var(--text-color-main);
+    line-height: 1.6;
 }
 
-/* Estilos de la caja principal del Banner */
+/* ESTILOS DEL HERO BANNER (DONDE ESTÁ EL MUNDO) */
 .hero-banner {
     width: 100%;
-    height: 520px;
-    background-color: #000000;
-    background-image: url('banner.jpeg');
-    /* CAMBIA ESTAS TRES LÍNEAS ABAJO: */
-    background-size: cover;       /* Alarga y adapta la foto para que llene el celular sin deformarse */
-    background-position: center;  /* Centra la imagen para que el mundo quede siempre en la mitad */
+    height: 600px;
+    /* Un poco más alto para impacto */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
+    /* Capa oscura y degradado */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-/* Menú de navegación arriba a la derecha */
+/* Menú de navegación moderno */
 .navbar {
-    width: 100%;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: auto;
     text-align: right;
-    padding-right: 40px;
+    padding: 0;
 }
 
 .navbar a {
-    color: #ffffff;
+    color: var(--text-color-main);
     text-decoration: none;
-    margin-left: 30px;
-    font-weight: bold;
-    font-size: 16px;
+    margin-left: 35px;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-/* Contenedor del centro */
+.navbar a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* La tarjeta con borde de Hollman Cardozo (Ahora limpia) */
 .banner-content {
-    width: 100%;
-    margin-top: 50px;
     text-align: center;
+    z-index: 10;
 }
 
-/* La tarjeta con borde rojo de Hollman Cardozo */
 .badge-card {
     display: inline-block;
-    border: 2px solid #a83232;
-    background-color: transparent;
-    padding: 15px 30px;
-    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    /* Borde dorado fino */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Fondo muy sutil y oscuro */
+    padding: 25px 50px;
+    border-radius: 8px;
+    /* Borde más suave */
 }
 
 .badge-card h1 {
-    font-size: 24px;
-    color: #000000;
-    letter-spacing: 1px;
+    font-size: 40px;
+    /* Más grande y elegante */
+    color: var(--text-color-main);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .badge-card .subtitle {
-    font-size: 16px;
-    color: #333333;
-    font-style: italic;
+    font-size: 20px;
+    color: var(--text-color-sub);
+    font-weight: 300;
 }
 
-/* ESTILOS DE LA SECCIÓN ACERCA DE */
+/* ESTILOS DE LA SECCIÓN ACERCA DE (Modo Oscuro) */
 .about-section {
     width: 100%;
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #5d60cd;
+    padding: 80px 20px;
+    background-color: #11141c;
+    /* Un azul grisáceo muy oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    border: 3px solid #1c212e;
+    /* Borde sutil */
+}
+
+.about-content {
+    max-width: 650px;
+    text-align: left;
 }
 
 .about-section h2 {
-    font-size: 28px;
-    color: #000000;
-    margin-bottom: 25px;
+    font-size: 34px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
 }
 
 .about-text {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
+    color: var(--text-color-sub);
+    font-size: 17px;
+    line-height: 1.7;
 }
 
-/* ESTILOS DE LA SECCIÓN COLECCIONES */
+/* ESTILOS DE LA SECCIÓN COLECCIONES (Tarjetas Premium) */
 .collections-section {
     width: 100%;
-    padding: 40px 20px;
-    background-color: #5d60cd;
+    padding: 80px 20px;
+    background-color: var(--bg-color-main);
     text-align: center;
 }
 
 .collections-title {
-    font-size: 32px;
-    color: #ffffff;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
+    font-size: 36px;
+    color: var(--accent-color);
+    letter-spacing: 2.5px;
+    margin-bottom: 60px;
+    font-weight: 600;
 }
 
 .products-grid {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -123,126 +167,159 @@ body {
 }
 
 .product-card {
-    width: 280px;
-    text-align: center;
+    width: 320px;
+    /* Un poco más anchas */
+    text-align: left;
+    /* Títulos a la izquierda */
+    background-color: var(--bg-color-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1c212e;
+    /* Borde sutil */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.05);
+    /* Brillo dorado muy suave */
 }
 
 .product-card img {
     width: 100%;
-    height: 280px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-bottom: 18px;
 }
 
 .product-card h3 {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 6px;
+    font-size: 18px;
+    color: var(--accent-color);
+    /* Color de acento */
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .product-card .price {
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+    font-size: 16px;
+    color: var(--text-color-sub);
+    font-weight: 400;
 }
 
-/* ESTILOS DE LA SECCIÓN CONTACTO */
+/* ESTILOS DE LA SECCIÓN CONTACTO (Formulario Nativo Integrado) */
 .contact-section {
     width: 100%;
-    padding: 50px 20px;
-    background-color: #5d60cd;
+    padding: 80px 20px;
+    background-color: #11141c;
+    /* Como el acerca de */
     text-align: center;
 }
 
 .contact-section h2 {
-    font-size: 28px;
-    color: #ffffff;
-    margin-bottom: 30px;
+    font-size: 34px;
+    color: var(--accent-color);
+    margin-bottom: 40px;
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 700px;
+    /* Un poco más ancho */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-row {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px 18px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    color: #ffffff;
-    font-size: 15px;
+    padding: 15px 20px;
+    background-color: #1a1e27;
+    /* Gris muy oscuro */
+    border: 1px solid #2a303e;
+    /* Borde sutil */
+    border-radius: 8px;
+    color: var(--text-color-main);
+    font-size: 16px;
     outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent-color);
+    /* Borde dorado al hacer foco */
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-form button {
-    align-self: center;
-    padding: 10px 40px;
-    background-color: #31336b;
-    border: none;
+    align-self: flex-start;
+    /* Botón a la izquierda */
+    padding: 12px 50px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    /* Botón con borde dorado */
     border-radius: 8px;
-    color: #ffffff;
-    font-size: 16px;
+    color: var(--accent-color);
+    font-size: 17px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.3s;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #1e1f44;
+    background-color: var(--accent-color);
+    color: var(--bg-color-main);
+    /* Cambia colores al hover */
 }
 
 /* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
 .main-footer {
     width: 100%;
-    padding: 30px 20px;
-    background-color: #101226;
+    padding: 40px 20px;
+    background-color: var(--bg-color-main);
     text-align: center;
+    border-top: 1px solid #1c212e;
+    /* Línea divisoria sutil */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .social-icons a {
-    color: #ffffff;
-    font-size: 24px;
+    color: var(--text-color-sub);
+    font-size: 26px;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #5d60cd;
-    transform: scale(1.2);
+    color: var(--accent-color);
+    transform: scale(1.15);
 }
 
 /* Estilo especial para la X del Footer */
 .x-icon {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-size: 22px;
+    font-size: 24px;
     display: inline-block;
     vertical-align: middle;
 }
