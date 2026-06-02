@@ -6,7 +6,7 @@ import seaborn as sns
 # 1. Configuración del título de la página web
 st.set_page_config(page_title="Dashboard Sena", layout="centered")
 
-st.title("📊 Mi Primer Dashboard Interactivo con Python")
+st.title("📊 Prueba de Dashboard Interactivo con Python Para Proyecto SENA")
 st.write("Bienvenido, Hollman. Este sistema lee tu Excel del ETL en tiempo real.")
 
 # 2. Cargar los datos del Excel que ya creamos
