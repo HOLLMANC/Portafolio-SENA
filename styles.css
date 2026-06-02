@@ -7,7 +7,7 @@
     --bg-color-card: #161a22;
     /* Gris oscuro para destacar tarjetas */
     --accent-color: #ffd700;
-    /* Dorado sutil para títulos y botones */
+    /* Dorado sutil para títulos y precios */
     --text-color-main: #ffffff;
     /* Texto blanco de alta legibilidad */
     --text-color-sub: #b0b0b0;
@@ -29,12 +29,13 @@ body {
 }
 
 /* ==========================================
-   HERO BANNER (IMAGEN DEL MUNDO) Y NAVBAR
+   HERO BANNER (IMAGEN DEL MUNDO SIN CARPETAS FALSAS)
    ========================================== */
 .hero-banner {
     width: 100%;
     height: 550px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), var(--bg-color-main)), url('banner.jpeg');
+    /* Corregido: apunta a tu banner suelto en GitHub */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +47,6 @@ body {
     padding: 20px;
 }
 
-/* Menú de navegación flotante arriba a la derecha */
 .navbar {
     position: absolute;
     top: 30px;
@@ -71,7 +71,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Tarjeta elegante de presentación central */
 .banner-content {
     text-align: center;
     z-index: 10;
@@ -80,11 +79,9 @@ body {
 .badge-card {
     display: inline-block;
     border: 1px solid var(--accent-color);
-    background-color: rgba(10, 12, 16, 0.75);
+    background-color: rgba(10, 12, 16, 0.8);
     padding: 25px 45px;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
-    /* Efecto leve de vidrio */
 }
 
 .badge-card h1 {
@@ -99,7 +96,6 @@ body {
     font-size: 18px;
     color: var(--text-color-sub);
     font-weight: 300;
-    letter-spacing: 1px;
 }
 
 /* ==========================================
@@ -109,7 +105,6 @@ body {
     width: 100%;
     padding: 80px 20px;
     background-color: #11141c;
-    /* Contraste azul grisáceo oscuro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +117,6 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #1c212e;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-content {
@@ -143,7 +137,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN MIS TRABAJOS / PRODUCTOS
+   SECCIÓN TRABAJOS (REJILLA DE TUS 6 CONJUNTOS)
    ========================================== */
 .collections-section {
     width: 100%;
@@ -161,43 +155,40 @@ body {
 }
 
 .products-grid {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 35px;
+    gap: 30px;
 }
 
 .product-card {
-    width: 310px;
+    width: 320px;
     text-align: left;
     background-color: var(--bg-color-card);
-    padding: 18px;
+    padding: 15px;
     border-radius: 12px;
     border: 1px solid #1c212e;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 12px 24px rgba(255, 215, 0, 0.08);
+    transform: translateY(-5px);
 }
 
 .product-card img {
     width: 100%;
-    height: 280px;
+    height: 320px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .product-card h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-color-main);
-    font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .product-card .price {
@@ -207,7 +198,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN CONTACTO (CONTENEDOR FORMULARIO)
+   SECCIÓN CONTACTO Y FORMULARIO INTEGRADO
    ========================================== */
 .contact-section {
     width: 100%;
@@ -222,8 +213,17 @@ body {
     margin-bottom: 15px;
 }
 
+.form-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
 /* ==========================================
-   PIE DE PÁGINA (FOOTER Y REDES SOCIALES)
+   FOOTER (REDES SOCIALES)
    ========================================== */
 .main-footer {
     width: 100%;
@@ -244,68 +244,51 @@ body {
     color: var(--text-color-sub);
     font-size: 24px;
     text-decoration: none;
-    transition: transform 0.3s, color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-icons a:hover {
     color: var(--accent-color);
-    transform: scale(1.2);
+    transform: scale(1.15);
 }
 
-/* Letra X estilizada para encajar con iconos */
 .x-icon {
     font-family: var(--font-family-main);
     font-weight: 700;
     font-size: 22px;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 /* ==========================================
-   DISEÑO ADAPTABLE PARA CELULARES (RESPONSIVE)
+RESPONSIVE PARA CELULARES
    ========================================== */
 @media (max-width: 768px) {
     .hero-banner {
-        height: 420px;
+        height: 400px;
     }
 
-    /* El menú se acomoda al centro automáticamente en pantallas chicas */
     .navbar {
         position: relative;
         top: 0;
         right: 0;
         text-align: center;
-        margin-bottom: 40px;
-        width: 100%;
+        margin-bottom: 30px;
     }
 
     .navbar a {
-        margin: 0 12px;
+        margin: 0 10px;
         font-size: 14px;
-    }
-
-    .badge-card {
-        padding: 20px 30px;
     }
 
     .badge-card h1 {
         font-size: 26px;
     }
 
-    /* El "Acerca de" pasa de horizontal a vertical */
     .about-section {
         flex-direction: column;
-        text-align: center;
-        padding: 50px 20px;
-        gap: 30px;
-    }
-
-    .about-content {
         text-align: center;
     }
 
     .product-card {
         width: 100%;
-        max-width: 340px;
     }
 }
