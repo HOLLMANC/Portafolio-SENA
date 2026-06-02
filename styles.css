@@ -1,20 +1,14 @@
-/* ==========================================
-   PALETA DE COLORES Y CONFIGURACIONES GLOBALES
-   ========================================== */
+/* PALETA DE COLORES Y ESTILOS GLOBALES */
 :root {
     --bg-color-main: #0a0c10;
-    /* Negro profundo premium */
     --bg-color-card: #161a22;
-    /* Gris oscuro para destacar tarjetas */
     --accent-color: #ffd700;
-    /* Dorado sutil para títulos y precios */
     --text-color-main: #ffffff;
-    /* Texto blanco de alta legibilidad */
     --text-color-sub: #b0b0b0;
-    /* Gris claro para descripciones */
     --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Limpieza básica */
 * {
     margin: 0;
     padding: 0;
@@ -28,13 +22,10 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================
-   HERO BANNER (IMAGEN DEL MUNDO SIN CARPETAS FALSAS)
-   ========================================== */
+/* ESTILOS DEL HERO BANNER */
 .hero-banner {
     width: 100%;
-    height: 550px;
-    /* Corregido: apunta a tu banner suelto en GitHub */
+    height: 600px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
     background-size: cover;
     background-position: center;
@@ -47,23 +38,25 @@ body {
     padding: 20px;
 }
 
+/* Menú de navegación moderno */
 .navbar {
     position: absolute;
     top: 30px;
     right: 50px;
-    z-index: 100;
+    width: auto;
+    text-align: right;
+    padding: 0;
 }
 
 .navbar a {
     color: var(--text-color-main);
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 35px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 17px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s, transform 0.3s;
-    display: inline-block;
 }
 
 .navbar a:hover {
@@ -71,6 +64,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* La tarjeta con borde de Hollman Cardozo */
 .banner-content {
     text-align: center;
     z-index: 10;
@@ -79,13 +73,13 @@ body {
 .badge-card {
     display: inline-block;
     border: 1px solid var(--accent-color);
-    background-color: rgba(10, 12, 16, 0.8);
-    padding: 25px 45px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 25px 50px;
     border-radius: 8px;
 }
 
 .badge-card h1 {
-    font-size: 38px;
+    font-size: 40px;
     color: var(--text-color-main);
     letter-spacing: 2px;
     font-weight: 700;
@@ -93,14 +87,12 @@ body {
 }
 
 .badge-card .subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-color-sub);
     font-weight: 300;
 }
 
-/* ==========================================
-   SECCIÓN ACERCA DE MÍ
-   ========================================== */
+/* ESTILOS DE LA SECCIÓN ACERCA DE (Modo Oscuro, Nueva Foto) */
 .about-section {
     width: 100%;
     padding: 80px 20px;
@@ -125,20 +117,18 @@ body {
 }
 
 .about-section h2 {
-    font-size: 32px;
+    font-size: 34px;
     color: var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .about-text {
     color: var(--text-color-sub);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
 }
 
-/* ==========================================
-   SECCIÓN TRABAJOS (REJILLA DE TUS 6 CONJUNTOS)
-   ========================================== */
+/* ESTILOS DE LA SECCIÓN COLECCIONES */
 .collections-section {
     width: 100%;
     padding: 80px 20px;
@@ -147,10 +137,10 @@ body {
 }
 
 .collections-title {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--accent-color);
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+    letter-spacing: 2.5px;
+    margin-bottom: 60px;
     font-weight: 600;
 }
 
@@ -160,46 +150,47 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .product-card {
     width: 320px;
     text-align: left;
     background-color: var(--bg-color-card);
-    padding: 15px;
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid #1c212e;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.05);
 }
 
 .product-card img {
     width: 100%;
-    height: 320px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .product-card h3 {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--text-color-main);
-    margin-bottom: 5px;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .product-card .price {
     font-size: 16px;
     color: var(--accent-color);
-    font-weight: 600;
+    font-weight: 400;
 }
 
-/* ==========================================
-   SECCIÓN CONTACTO Y FORMULARIO INTEGRADO
-   ========================================== */
+/* ESTILOS DE LA SECCIÓN CONTACTO (Formulario Nativo Integrado) */
 .contact-section {
     width: 100%;
     padding: 80px 20px;
@@ -208,23 +199,67 @@ body {
 }
 
 .contact-section h2 {
-    font-size: 32px;
+    font-size: 34px;
     color: var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 
-.form-container {
-    max-width: 750px;
+.contact-form {
+    max-width: 700px;
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* ==========================================
-   FOOTER (REDES SOCIALES)
-   ========================================== */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #1a1e27;
+    border: 1px solid #2a303e;
+    border-radius: 8px;
+    color: var(--text-color-main);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 12px 50px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    color: var(--accent-color);
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color-main);
+}
+
+/* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
 .main-footer {
     width: 100%;
     padding: 40px 20px;
@@ -242,9 +277,9 @@ body {
 
 .social-icons a {
     color: var(--text-color-sub);
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
@@ -252,43 +287,12 @@ body {
     transform: scale(1.15);
 }
 
+/* Estilo especial para la X del Footer */
 .x-icon {
-    font-family: var(--font-family-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
-    font-size: 22px;
-}
-
-/* ==========================================
-RESPONSIVE PARA CELULARES
-   ========================================== */
-@media (max-width: 768px) {
-    .hero-banner {
-        height: 400px;
-    }
-
-    .navbar {
-        position: relative;
-        top: 0;
-        right: 0;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .navbar a {
-        margin: 0 10px;
-        font-size: 14px;
-    }
-
-    .badge-card h1 {
-        font-size: 26px;
-    }
-
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .product-card {
-        width: 100%;
-    }
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
 }
