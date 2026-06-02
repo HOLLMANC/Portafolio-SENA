@@ -3,7 +3,7 @@
    ========================================== */
 :root {
     --bg-color-main: #0a0c10;
-    /* Negro profundo premium */
+    /* Negro profundo premium de tu localhost */
     --bg-color-card: #161a22;
     /* Gris oscuro para las tarjetas de producto */
     --accent-color: #ffd700;
@@ -46,7 +46,7 @@ body {
     padding: 20px;
 }
 
-/* Menú de navegación alineado a la derecha */
+/* Menú de navegación a la derecha */
 .navbar {
     position: absolute;
     top: 30px;
@@ -71,7 +71,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Tarjeta centrada con el borde dorado */
+/* Tarjeta dorada central */
 .banner-content {
     text-align: center;
     z-index: 10;
@@ -106,7 +106,7 @@ body {
     width: 100%;
     padding: 80px 20px;
     background-color: #11141c;
-    /* Fondo ligeramente gris oscuro */
+    /* Gris sutil de fondo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN TRABAJOS (CUADRÍCULA DE 6 PRODUCTOS)
+   SECCIÓN TRABAJOS (6 TARJETAS EN FILAS REORGANIZADAS)
    ========================================== */
 .collections-section {
     width: 100%;
@@ -200,7 +200,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN CONTACTO CON FORMULARIO INTEGRADO
+   SECCIÓN CONTACTO (FORMULARIO GOOGLE)
    ========================================== */
 .contact-section {
     width: 100%;
@@ -261,7 +261,7 @@ body {
 }
 
 /* ==========================================
-   RESPONSIVE PARA CELULARES
+   RESPONSIVE (ADAPTACIÓN A CELULARES)
    ========================================== */
 @media (max-width: 768px) {
     .hero-banner {
