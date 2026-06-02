@@ -1,17 +1,17 @@
 /* ==========================================
-   PALETA DE COLORES Y ESTILOS GLOBALES
+   PALETA DE COLORES OSCURA (LOCALHOST ORIGINAL)
    ========================================== */
 :root {
     --bg-color-main: #0a0c10;
-    /* Negro profundo premium de tu localhost */
+    /* Negro profundo premium */
     --bg-color-card: #161a22;
     /* Gris oscuro para las tarjetas de producto */
     --accent-color: #ffd700;
-    /* Dorado sutil para títulos y precios */
+    /* Dorado para títulos y precios */
     --text-color-main: #ffffff;
-    /* Texto blanco de alta legibilidad */
+    /* Texto blanco */
     --text-color-sub: #b0b0b0;
-    /* Gris claro para subtítulos y descripciones */
+    /* Gris claro para descripciones */
     --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 /* ==========================================
-   ESTILOS DEL HERO BANNER (DONDE ESTÁ EL MUNDO)
+   HERO BANNER (EL MUNDO)
    ========================================== */
 .hero-banner {
     width: 100%;
@@ -46,7 +46,6 @@ body {
     padding: 20px;
 }
 
-/* Menú de navegación a la derecha */
 .navbar {
     position: absolute;
     top: 30px;
@@ -62,16 +61,13 @@ body {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.3s, transform 0.3s;
-    display: inline-block;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
     color: var(--accent-color);
-    transform: translateY(-2px);
 }
 
-/* Tarjeta dorada central */
 .banner-content {
     text-align: center;
     z-index: 10;
@@ -96,17 +92,15 @@ body {
 .badge-card .subtitle {
     font-size: 18px;
     color: var(--text-color-sub);
-    font-weight: 300;
 }
 
 /* ==========================================
-   SECCIÓN ACERCA DE MÍ (CON LA FOTO DE LAS NIÑAS)
+   SECCIÓN ACERCA DE MÍ (FOTO CIRCULAR FIJA)
    ========================================== */
 .about-section {
     width: 100%;
     padding: 80px 20px;
     background-color: #11141c;
-    /* Gris sutil de fondo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +112,9 @@ body {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #1c212e;
+    border: 3px solid var(--accent-color);
+    /* Borde dorado para resaltar la foto */
+    display: block;
 }
 
 .about-content {
@@ -135,11 +131,10 @@ body {
 .about-text {
     color: var(--text-color-sub);
     font-size: 16px;
-    line-height: 1.7;
 }
 
 /* ==========================================
-   SECCIÓN TRABAJOS (6 TARJETAS EN FILAS REORGANIZADAS)
+   SECCIÓN TRABAJOS (CUADRÍCULA DE 6)
    ========================================== */
 .collections-section {
     width: 100%;
@@ -153,7 +148,6 @@ body {
     color: var(--accent-color);
     letter-spacing: 2px;
     margin-bottom: 50px;
-    font-weight: 600;
 }
 
 .products-grid {
@@ -200,7 +194,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN CONTACTO (FORMULARIO GOOGLE)
+   SECCIÓN CONTACTO
    ========================================== */
 .contact-section {
     width: 100%;
@@ -221,11 +215,10 @@ body {
     background-color: #ffffff;
     padding: 10px;
     border-radius: 12px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================
-   PIE DE PÁGINA (REDES SOCIALES)
+   FOOTER
    ========================================== */
 .main-footer {
     width: 100%;
@@ -246,12 +239,11 @@ body {
     color: var(--text-color-sub);
     font-size: 26px;
     text-decoration: none;
-    transition: transform 0.3s, color 0.3s;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
     color: var(--accent-color);
-    transform: scale(1.15);
 }
 
 .x-icon {
@@ -260,9 +252,7 @@ body {
     font-size: 24px;
 }
 
-/* ==========================================
-   RESPONSIVE (ADAPTACIÓN A CELULARES)
-   ========================================== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero-banner {
         height: 450px;
@@ -279,10 +269,6 @@ body {
     .navbar a {
         margin: 0 10px;
         font-size: 14px;
-    }
-
-    .badge-card h1 {
-        font-size: 28px;
     }
 
     .about-section {
