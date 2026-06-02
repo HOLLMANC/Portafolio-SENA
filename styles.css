@@ -16,7 +16,7 @@ body {
     height: 520px;
     background-color: #000000;
     /* Corregido: Quitamos Img/ y pusimos el nombre real de tu imagen del mundo/tecnología */
-    background-image: url('heather-ford-5gKYsrH_ebY-unsplash.jpg');
+    background-image: url('banner.jpeg');
     background-size: cover; /* Cambiado a cover para que llene todo el fondo de forma elegante */
     background-position: center;
     background-repeat: no-repeat;
