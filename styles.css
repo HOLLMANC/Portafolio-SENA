@@ -2,281 +2,255 @@
    PALETA DE COLORES OSCURA (LOCALHOST ORIGINAL)
    ========================================== */
 :root {
-    --bg-color-main: #0a0c10;
-    /* Negro profundo premium */
-    --bg-color-card: #161a22;
-    /* Gris oscuro para las tarjetas de producto */
-    --accent-color: #ffd700;
-    /* Dorado para títulos y precios */
-    --text-color-main: #ffffff;
-    /* Texto blanco */
-    --text-color-sub: #b0b0b0;
-    /* Gris claro para descripciones */
-    --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --bg-color-main: #0a0c10;   /* Negro profundo premium */
+  --bg-color-card: #161a22;   /* Gris oscuro para las tarjetas de producto */
+  --accent-color: #ffd700;    /* Dorado para títulos y precios */
+  --text-color-main: #ffffff; /* Texto blanco */
+  --text-color-sub: #b0b0b0;  /* Gris claro para descripciones */
+  --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-family-main);
-    background-color: var(--bg-color-main);
-    color: var(--text-color-main);
-    line-height: 1.6;
+  font-family: var(--font-family-main);
+  background-color: var(--bg-color-main);
+  color: var(--text-color-main);
+  line-height: 1.6;
 }
 
 /* ==========================================
    HERO BANNER (EL MUNDO)
    ========================================== */
 .hero-banner {
-    width: 100%;
-    height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  width: 100%;
+  height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .navbar {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    z-index: 100;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 100;
 }
 
 .navbar a {
-    color: var(--text-color-main);
-    text-decoration: none;
-    margin-left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+  color: var(--text-color-main);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .banner-content {
-    text-align: center;
-    z-index: 10;
+  text-align: center;
+  z-index: 10;
 }
 
 .badge-card {
-    display: inline-block;
-    border: 1px solid var(--accent-color);
-    background-color: rgba(10, 12, 16, 0.85);
-    padding: 25px 45px;
-    border-radius: 8px;
+  display: inline-block;
+  border: 1px solid var(--accent-color);
+  background-color: rgba(10, 12, 16, 0.85);
+  padding: 25px 45px;
+  border-radius: 8px;
 }
 
 .badge-card h1 {
-    font-size: 38px;
-    color: var(--text-color-main);
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-bottom: 5px;
+  font-size: 38px;
+  color: var(--text-color-main);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .badge-card .subtitle {
-    font-size: 18px;
-    color: var(--text-color-sub);
+  font-size: 18px;
+  color: var(--text-color-sub);
 }
 
 /* ==========================================
    SECCIÓN ACERCA DE MÍ (FOTO CIRCULAR FIJA)
    ========================================== */
 .about-section {
-    width: 100%;
-    padding: 80px 20px;
-    background-color: #11141c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #11141c; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-color);
-    /* Borde dorado para resaltar la foto */
-    display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  display: block;
 }
 
 .about-content {
-    max-width: 650px;
-    text-align: left;
+  max-width: 650px;
+  text-align: left;
 }
 
 .about-section h2 {
-    font-size: 32px;
-    color: var(--accent-color);
-    margin-bottom: 15px;
+  font-size: 32px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
 }
 
 .about-text {
-    color: var(--text-color-sub);
-    font-size: 16px;
+  color: var(--text-color-sub);
+  font-size: 16px;
 }
 
 /* ==========================================
    SECCIÓN TRABAJOS (CUADRÍCULA DE 6)
    ========================================== */
 .collections-section {
-    width: 100%;
-    padding: 80px 20px;
-    background-color: var(--bg-color-main);
-    text-align: center;
+  width: 100%;
+  padding: 80px 20px;
+  background-color: var(--bg-color-main);
+  text-align: center;
 }
 
 .collections-title {
-    font-size: 32px;
-    color: var(--accent-color);
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+  font-size: 32px;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  margin-bottom: 50px;
 }
 
 .products-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .product-card {
-    width: 320px;
-    text-align: left;
-    background-color: var(--bg-color-card);
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #1c212e;
-    transition: transform 0.3s;
+  width: 320px;
+  text-align: left;
+  background-color: var(--bg-color-card);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #1c212e;
+  transition: transform 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .product-card img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .product-card h3 {
-    font-size: 16px;
-    color: var(--text-color-main);
-    margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--text-color-main);
+  margin-bottom: 5px;
 }
 
 .product-card .price {
-    font-size: 16px;
-    color: var(--accent-color);
-    font-weight: 600;
+  font-size: 16px;
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
 /* ==========================================
    SECCIÓN CONTACTO
    ========================================== */
 .contact-section {
-    width: 100%;
-    padding: 80px 20px;
-    background-color: #11141c;
-    text-align: center;
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #11141c;
+  text-align: center;
 }
 
 .contact-section h2 {
-    font-size: 32px;
-    color: var(--accent-color);
-    margin-bottom: 15px;
+  font-size: 32px;
+  color: var(--accent-color);
+  margin-bottom: 15px;
 }
 
 .form-container {
-    max-width: 750px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 12px;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
 }
 
 /* ==========================================
    FOOTER
    ========================================== */
 .main-footer {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: var(--bg-color-main);
-    text-align: center;
-    border-top: 1px solid #1c212e;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--bg-color-main);
+  text-align: center;
+  border-top: 1px solid #1c212e;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .social-icons a {
-    color: var(--text-color-sub);
-    font-size: 26px;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: var(--text-color-sub);
+  font-size: 26px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .x-icon {
-    font-family: var(--font-family-main);
-    font-weight: 700;
-    font-size: 24px;
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  font-size: 24px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .hero-banner {
-        height: 450px;
-    }
-
-    .navbar {
-        position: relative;
-        top: 0;
-        right: 0;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .navbar a {
-        margin: 0 10px;
-        font-size: 14px;
-    }
-
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .product-card {
-        width: 100%;
-    }
+  .hero-banner { height: 450px; }
+  .navbar { position: relative; top: 0; right: 0; text-align: center; margin-bottom: 30px; }
+  .navbar a { margin: 0 10px; font-size: 14px; }
+  .about-section { flex-direction: column; text-align: center; }
+  .product-card { width: 100%; }
 }
