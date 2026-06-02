@@ -15,10 +15,10 @@ body {
     width: 100%;
     height: 520px;
     background-color: #000000;
-    /* Corregido: Quitamos Img/ y pusimos el nombre real de tu imagen del mundo/tecnología */
     background-image: url('banner.jpeg');
-    background-size: cover; /* Cambiado a cover para que llene todo el fondo de forma elegante */
-    background-position: center;
+    /* CAMBIA ESTAS TRES LÍNEAS ABAJO: */
+    background-size: cover;       /* Alarga y adapta la foto para que llene el celular sin deformarse */
+    background-position: center;  /* Centra la imagen para que el mundo quede siempre en la mitad */
     background-repeat: no-repeat;
     position: relative;
     padding: 20px;
