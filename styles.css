@@ -1,19 +1,20 @@
-/* PALETA DE COLORES Y ESTILOS GLOBALES */
+/* ==========================================
+   PALETA DE COLORES Y CONFIGURACIONES GLOBALES
+   ========================================== */
 :root {
     --bg-color-main: #0a0c10;
-    /* Un negro casi puro para el fondo profundo */
+    /* Negro profundo premium */
     --bg-color-card: #161a22;
-    /* Gris oscuro para las tarjetas */
+    /* Gris oscuro para destacar tarjetas */
     --accent-color: #ffd700;
-    /* Dorado suave para acentos (bordes, botones) */
+    /* Dorado sutil para títulos y botones */
     --text-color-main: #ffffff;
+    /* Texto blanco de alta legibilidad */
     --text-color-sub: #b0b0b0;
-    /* Gris claro para subtítulos y textos largos */
+    /* Gris claro para descripciones */
     --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Tipografía limpia */
 }
 
-/* Limpieza básica */
 * {
     margin: 0;
     padding: 0;
@@ -27,13 +28,13 @@ body {
     line-height: 1.6;
 }
 
-/* ESTILOS DEL HERO BANNER (DONDE ESTÁ EL MUNDO) */
+/* ==========================================
+   HERO BANNER (IMAGEN DEL MUNDO) Y NAVBAR
+   ========================================== */
 .hero-banner {
     width: 100%;
-    height: 600px;
-    /* Un poco más alto para impacto */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), var(--bg-color-main)), url('banner.jpeg');
-    /* Capa oscura y degradado */
+    height: 550px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), var(--bg-color-main)), url('banner.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,25 +46,24 @@ body {
     padding: 20px;
 }
 
-/* Menú de navegación moderno */
+/* Menú de navegación flotante arriba a la derecha */
 .navbar {
     position: absolute;
     top: 30px;
     right: 50px;
-    width: auto;
-    text-align: right;
-    padding: 0;
+    z-index: 100;
 }
 
 .navbar a {
     color: var(--text-color-main);
     text-decoration: none;
-    margin-left: 35px;
+    margin-left: 30px;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 .navbar a:hover {
@@ -71,7 +71,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* La tarjeta con borde de Hollman Cardozo (Ahora limpia) */
+/* Tarjeta elegante de presentación central */
 .banner-content {
     text-align: center;
     z-index: 10;
@@ -80,17 +80,15 @@ body {
 .badge-card {
     display: inline-block;
     border: 1px solid var(--accent-color);
-    /* Borde dorado fino */
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Fondo muy sutil y oscuro */
-    padding: 25px 50px;
+    background-color: rgba(10, 12, 16, 0.75);
+    padding: 25px 45px;
     border-radius: 8px;
-    /* Borde más suave */
+    backdrop-filter: blur(5px);
+    /* Efecto leve de vidrio */
 }
 
 .badge-card h1 {
-    font-size: 40px;
-    /* Más grande y elegante */
+    font-size: 38px;
     color: var(--text-color-main);
     letter-spacing: 2px;
     font-weight: 700;
@@ -98,17 +96,20 @@ body {
 }
 
 .badge-card .subtitle {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-color-sub);
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
-/* ESTILOS DE LA SECCIÓN ACERCA DE (Modo Oscuro) */
+/* ==========================================
+   SECCIÓN ACERCA DE MÍ
+   ========================================== */
 .about-section {
     width: 100%;
     padding: 80px 20px;
     background-color: #11141c;
-    /* Un azul grisáceo muy oscuro */
+    /* Contraste azul grisáceo oscuro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +122,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #1c212e;
-    /* Borde sutil */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-content {
@@ -130,18 +131,20 @@ body {
 }
 
 .about-section h2 {
-    font-size: 34px;
+    font-size: 32px;
     color: var(--accent-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .about-text {
     color: var(--text-color-sub);
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
 }
 
-/* ESTILOS DE LA SECCIÓN COLECCIONES (Tarjetas Premium) */
+/* ==========================================
+   SECCIÓN MIS TRABAJOS / PRODUCTOS
+   ========================================== */
 .collections-section {
     width: 100%;
     padding: 80px 20px;
@@ -150,149 +153,84 @@ body {
 }
 
 .collections-title {
-    font-size: 36px;
+    font-size: 32px;
     color: var(--accent-color);
-    letter-spacing: 2.5px;
-    margin-bottom: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
     font-weight: 600;
 }
 
 .products-grid {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 35px;
 }
 
 .product-card {
-    width: 320px;
-    /* Un poco más anchas */
+    width: 310px;
     text-align: left;
-    /* Títulos a la izquierda */
     background-color: var(--bg-color-card);
-    padding: 20px;
+    padding: 18px;
     border-radius: 12px;
     border: 1px solid #1c212e;
-    /* Borde sutil */
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.05);
-    /* Brillo dorado muy suave */
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 24px rgba(255, 215, 0, 0.08);
 }
 
 .product-card img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .product-card h3 {
     font-size: 18px;
-    color: var(--accent-color);
-    /* Color de acento */
+    color: var(--text-color-main);
     font-weight: 500;
     margin-bottom: 8px;
 }
 
 .product-card .price {
     font-size: 16px;
-    color: var(--text-color-sub);
-    font-weight: 400;
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
-/* ESTILOS DE LA SECCIÓN CONTACTO (Formulario Nativo Integrado) */
+/* ==========================================
+   SECCIÓN CONTACTO (CONTENEDOR FORMULARIO)
+   ========================================== */
 .contact-section {
     width: 100%;
     padding: 80px 20px;
     background-color: #11141c;
-    /* Como el acerca de */
     text-align: center;
 }
 
 .contact-section h2 {
-    font-size: 34px;
+    font-size: 32px;
     color: var(--accent-color);
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
-.contact-form {
-    max-width: 700px;
-    /* Un poco más ancho */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px 20px;
-    background-color: #1a1e27;
-    /* Gris muy oscuro */
-    border: 1px solid #2a303e;
-    /* Borde sutil */
-    border-radius: 8px;
-    color: var(--text-color-main);
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--accent-color);
-    /* Borde dorado al hacer foco */
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.contact-form button {
-    align-self: flex-start;
-    /* Botón a la izquierda */
-    padding: 12px 50px;
-    background-color: transparent;
-    border: 2px solid var(--accent-color);
-    /* Botón con borde dorado */
-    border-radius: 8px;
-    color: var(--accent-color);
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background 0.3s, color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color-main);
-    /* Cambia colores al hover */
-}
-
-/* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
+/* ==========================================
+   PIE DE PÁGINA (FOOTER Y REDES SOCIALES)
+   ========================================== */
 .main-footer {
     width: 100%;
     padding: 40px 20px;
     background-color: var(--bg-color-main);
     text-align: center;
     border-top: 1px solid #1c212e;
-    /* Línea divisoria sutil */
 }
 
 .social-icons {
@@ -304,54 +242,62 @@ body {
 
 .social-icons a {
     color: var(--text-color-sub);
-    font-size: 26px;
+    font-size: 24px;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
     color: var(--accent-color);
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
-/* Estilo especial para la X del Footer */
+/* Letra X estilizada para encajar con iconos */
 .x-icon {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family-main);
     font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
+    font-size: 22px;
     display: inline-block;
     vertical-align: middle;
 }
 
-/* CONFIGURACIÓN ESPECIAL PARA CELULARES (RESPONSIVE) */
+/* ==========================================
+   DISEÑO ADAPTABLE PARA CELULARES (RESPONSIVE)
+   ========================================== */
 @media (max-width: 768px) {
     .hero-banner {
-        height: 450px;
+        height: 420px;
     }
 
-    .badge-card h1 {
-        font-size: 28px;
-    }
-
+    /* El menú se acomoda al centro automáticamente en pantallas chicas */
     .navbar {
         position: relative;
         top: 0;
         right: 0;
         text-align: center;
-        background-color: var(--bg-color-main);
-        padding: 15px 0;
+        margin-bottom: 40px;
+        width: 100%;
     }
 
     .navbar a {
-        margin: 0 15px;
+        margin: 0 12px;
         font-size: 14px;
     }
 
+    .badge-card {
+        padding: 20px 30px;
+    }
+
+    .badge-card h1 {
+        font-size: 26px;
+    }
+
+    /* El "Acerca de" pasa de horizontal a vertical */
     .about-section {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
+        padding: 50px 20px;
+        gap: 30px;
     }
 
     .about-content {
